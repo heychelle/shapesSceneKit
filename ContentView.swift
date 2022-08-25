@@ -20,7 +20,8 @@ struct ContentView: View {
         //      Create the layer
                 let layer = CALayer()
                 layer.frame = CGRect(x: 0, y: 0, width: 1000, height: 1000)
-                layer.backgroundColor = color.cgColor
+                layer.contents = UIImage(named: "dummy")?.cgImage
+//                layer.backgroundColor = color.cgColor
                 layer.borderColor = border.cgColor
                 layer.borderWidth = 50
                 
@@ -30,8 +31,8 @@ struct ContentView: View {
                     if (childNode.name == "MainActor") {
                         for i in 0...(childNode.geometry?.materials.count)!-1 {
                             if (side == i) {
-                                childNode.geometry?.materials[i].diffuse.contents = image
-//                                childNode.geometry?.materials[i].diffuse.contents = layer
+//                                childNode.geometry?.materials[i].diffuse.contents = image
+                                childNode.geometry?.materials[i].diffuse.contents = layer
                             } else {
                                 childNode.geometry?.materials[i].diffuse.contents = color
                             }

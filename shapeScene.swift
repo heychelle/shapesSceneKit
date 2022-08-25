@@ -16,12 +16,6 @@ class BoxNode: SCNNode {
         let box = SCNBox(width: length, height: length, length: length, chamferRadius: 0)
         let color = UIColor.red
         let image = UIImage(named: "dummy")
-        
-//      Create the layer
-//        let layer = CALayer()
-//        layer.frame = CGRect(x: 0, y: 0, width: 1000, height: 1000)
-//        layer.borderColor = UIColor.blue.cgColor
-//        layer.borderWidth = 100
 
         // Create a material from the layer and assign it
         box.materials = [color, color, color, color, color, color].map {
