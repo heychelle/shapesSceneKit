@@ -12,17 +12,19 @@ import SceneKit
 class BoxNode: SCNNode {
     
     override init() {
-        let length: CGFloat = 5
+        let length: CGFloat = 0.5
         let box = SCNBox(width: length, height: length, length: length, chamferRadius: 0)
+        let color = UIColor.red
+        let image = UIImage(named: "dummy")
         
 //      Create the layer
-        let layer = CALayer()
-        layer.frame = CGRect(x: 0, y: 0, width: 1000, height: 1000)
-        layer.borderColor = UIColor.blue.cgColor
-        layer.borderWidth = 100
+//        let layer = CALayer()
+//        layer.frame = CGRect(x: 0, y: 0, width: 1000, height: 1000)
+//        layer.borderColor = UIColor.blue.cgColor
+//        layer.borderWidth = 100
 
         // Create a material from the layer and assign it
-        box.materials = [UIColor.red, UIColor.red, UIColor.red, UIColor.red, UIColor.red, UIColor.red].map {
+        box.materials = [color, color, color, color, color, color].map {
             let material = SCNMaterial()
             material.diffuse.contents = $0
             material.isDoubleSided = true

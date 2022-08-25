@@ -45,7 +45,7 @@ class GameSceneViewController: UIViewController {
 func cameraNode() -> SCNNode {
     let cameraNode = SCNNode()
     cameraNode.camera = SCNCamera()
-    cameraNode.position = SCNVector3(x: 0, y: 0, z: 2)
+    cameraNode.position = SCNVector3(x: 0, y: 0, z: 10)
     return cameraNode
 }
 
